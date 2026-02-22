@@ -15,7 +15,10 @@ app.use(cookieParser());
 app.use(express.static('frontend'));
 
 import authRoutes from './src/routes/auth.routes.js';
+import postRoutes from './src/routes/post.routes.js';
+
 app.use('/api/auth', authRoutes);
+app.use('/api/posts', postRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
